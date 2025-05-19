@@ -1,0 +1,13 @@
+{"time":"2024-09-30T22:51:55.662983617-04:00","level":"INFO","msg":"started logging, with flags","port-filename":"/tmp/tmpb_zuwky0/port-355244.txt","pid":355244,"debug":false,"disable-analytics":false}
+{"time":"2024-09-30T22:51:55.663008995-04:00","level":"INFO","msg":"FeatureState","shutdownOnParentExitEnabled":false}
+{"time":"2024-09-30T22:51:55.66360456-04:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":355244}
+{"time":"2024-09-30T22:51:55.66356755-04:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":41839,"Zone":""}}
+{"time":"2024-09-30T22:51:55.859542599-04:00","level":"INFO","msg":"created new connection","id":"127.0.0.1:50992"}
+{"time":"2024-09-30T22:51:56.017346477-04:00","level":"INFO","msg":"connection init received","streamId":"mwlk2gfh","id":"127.0.0.1:50992"}
+{"time":"2024-09-30T22:51:56.017486631-04:00","level":"ERROR","msg":"error creating symlink","error":"symlink /home/jordan/.cache/wandb/logs/core-debug-20240930_225155.log /home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/wandb/run-20240930_225156-mwlk2gfh/logs/debug-core.log: file exists"}
+{"time":"2024-09-30T22:51:56.020330752-04:00","level":"INFO","msg":"connection init completed","streamId":"mwlk2gfh","id":"127.0.0.1:50992"}
+{"time":"2024-09-30T22:51:58.749355246-04:00","level":"INFO","msg":"connection: teardown","id":"127.0.0.1:50992"}
+{"time":"2024-09-30T22:51:58.749402656-04:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2024-09-30T22:51:58.74945807-04:00","level":"INFO","msg":"closed connection","id":"127.0.0.1:50992"}
+{"time":"2024-09-30T22:51:59.195663204-04:00","level":"INFO","msg":"connection closed","id":"127.0.0.1:50992"}
+{"time":"2024-09-30T22:51:59.1956769-04:00","level":"INFO","msg":"server is closed"}

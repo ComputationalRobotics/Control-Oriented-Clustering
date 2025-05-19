@@ -1,0 +1,86 @@
+Training parameters:
+num_epochs: 300
+num_diffusion_iters: 100
+num_tests: 100
+num_train_demos: 500
+num_vis_demos: 3
+pred_horizon: 16
+obs_horizon: 2
+action_horizon: 8
+
+Baseline Mode: Train Single Diffusion Policy
+Training parameters:
+num_diffusion_iters: 100
+num_tests: 100
+num_train_demos: 500
+num_vis_demos: 3
+pred_horizon: 16
+obs_horizon: 2
+action_horizon: 8
+/home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/eval_baseline.py:87: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model_state_dict = torch.load(model_path)
+/home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/eval_baseline.py:92: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model_state_dict = torch.load(ema_path)
+All models have been loaded successfully.
+
+Eval Diff Policy on Domain #18:
+Eval Trial #0: 301it [00:23, 12.71it/s, current=0, max=0]                                              
+Eval Trial #1:  43%|█████████████▏                 | 128/300 [00:08<00:10, 15.76it/s, current=0, max=0]
+Traceback (most recent call last):
+  File "/home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/test_domain_18_model.py", line 159, in <module>
+    main()
+  File "/home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/test_domain_18_model.py", line 133, in main
+    scores = eval_baseline(config, dataset_name, num_datasets, combined_stats, checkpoint_dir)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/eval_baseline.py", line 181, in eval_baseline
+    noise_pred = ema_nets["invariant"](
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jordan/anaconda3/envs/feature_analysis/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jordan/anaconda3/envs/feature_analysis/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/models.py", line 245, in forward
+    x = resnet(x, global_feature)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jordan/anaconda3/envs/feature_analysis/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jordan/anaconda3/envs/feature_analysis/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/models.py", line 111, in forward
+    out = self.blocks[0](x)
+          ^^^^^^^^^^^^^^^^^
+  File "/home/jordan/anaconda3/envs/feature_analysis/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jordan/anaconda3/envs/feature_analysis/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/models.py", line 72, in forward
+    return self.block(x)
+           ^^^^^^^^^^^^^
+  File "/home/jordan/anaconda3/envs/feature_analysis/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jordan/anaconda3/envs/feature_analysis/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jordan/anaconda3/envs/feature_analysis/lib/python3.12/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/jordan/anaconda3/envs/feature_analysis/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jordan/anaconda3/envs/feature_analysis/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jordan/anaconda3/envs/feature_analysis/lib/python3.12/site-packages/torch/nn/modules/normalization.py", line 288, in forward
+    return F.group_norm(
+           ^^^^^^^^^^^^^
+  File "/home/jordan/anaconda3/envs/feature_analysis/lib/python3.12/site-packages/torch/nn/functional.py", line 2606, in group_norm
+    return torch.group_norm(input, num_groups, weight, bias, eps, torch.backends.cudnn.enabled)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

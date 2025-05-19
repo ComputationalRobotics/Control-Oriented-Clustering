@@ -1,0 +1,23 @@
+# dirs
+display_name: train_model
+dataset_path_dir: ../dataset_domain/domain18
+models_save_dir: train_model_folder
+output_dir: train_model_folder
+
+# hyperparams
+num_epochs: 300
+num_diffusion_iters: 100
+num_tests: 100
+num_vis_demos: 3
+num_train_demos: 500
+num_warmup_steps: 500
+pred_horizon: 16
+obs_horizon: 2
+action_horizon: 8
+max_steps: 300
+lr: 0.0001
+weight_decay: 0.000001
+batch_size: 64
+resize_scale: 96
+wandb: true
+

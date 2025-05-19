@@ -1,0 +1,26 @@
+2024-09-30 22:53:13,291 INFO    MainThread:356570 [wandb_setup.py:_flush():77] Current SDK version is 0.18.0
+2024-09-30 22:53:13,291 INFO    MainThread:356570 [wandb_setup.py:_flush():77] Configure stats pid to 356570
+2024-09-30 22:53:13,291 INFO    MainThread:356570 [wandb_setup.py:_flush():77] Loading settings from /home/jordan/.config/wandb/settings
+2024-09-30 22:53:13,291 INFO    MainThread:356570 [wandb_setup.py:_flush():77] Loading settings from /home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/wandb/settings
+2024-09-30 22:53:13,291 INFO    MainThread:356570 [wandb_setup.py:_flush():77] Loading settings from environment variables: {}
+2024-09-30 22:53:13,291 INFO    MainThread:356570 [wandb_setup.py:_flush():77] Applying setup settings: {'_disable_service': False}
+2024-09-30 22:53:13,291 INFO    MainThread:356570 [wandb_setup.py:_flush():77] Inferring run settings from compute environment: {'program_relpath': 'test_domain_18_model.py', 'program_abspath': '/home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/test_domain_18_model.py', 'program': '/home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/test_domain_18_model.py'}
+2024-09-30 22:53:13,291 INFO    MainThread:356570 [wandb_setup.py:_flush():77] Applying login settings: {}
+2024-09-30 22:53:13,291 INFO    MainThread:356570 [wandb_init.py:_log_setup():525] Logging user logs to /home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/wandb/run-20240930_225313-g05qio5a/logs/debug.log
+2024-09-30 22:53:13,291 INFO    MainThread:356570 [wandb_init.py:_log_setup():526] Logging internal logs to /home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/wandb/run-20240930_225313-g05qio5a/logs/debug-internal.log
+2024-09-30 22:53:13,291 INFO    MainThread:356570 [wandb_init.py:init():609] calling init triggers
+2024-09-30 22:53:13,291 INFO    MainThread:356570 [wandb_init.py:init():616] wandb.init called with sweep_config: {}
+config: {'display_name': 'test_domain_18_model', 'dataset_path_dir': '../dataset_domain/domain18', 'models_save_dir': 'test_domain_18_model', 'output_dir': 'test_domain_18_model', 'num_epochs': 300, 'num_diffusion_iters': 100, 'num_tests': 100, 'num_vis_demos': 3, 'num_train_demos': 500, 'num_warmup_steps': 500, 'pred_horizon': 16, 'obs_horizon': 2, 'action_horizon': 8, 'max_steps': 300, 'batch_size': 64, 'resize_scale': 96, 'wandb': True}
+2024-09-30 22:53:13,291 INFO    MainThread:356570 [wandb_init.py:init():659] starting backend
+2024-09-30 22:53:13,291 INFO    MainThread:356570 [wandb_init.py:init():663] setting up manager
+2024-09-30 22:53:13,292 INFO    MainThread:356570 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-09-30 22:53:13,292 INFO    MainThread:356570 [wandb_init.py:init():671] backend started and connected
+2024-09-30 22:53:13,294 INFO    MainThread:356570 [wandb_init.py:init():766] updated telemetry
+2024-09-30 22:53:13,295 INFO    MainThread:356570 [wandb_init.py:init():799] communicating run to backend with 90.0 second timeout
+2024-09-30 22:53:13,476 INFO    MainThread:356570 [wandb_init.py:init():850] starting run threads in backend
+2024-09-30 22:53:13,543 INFO    MainThread:356570 [wandb_run.py:_console_start():2466] atexit reg
+2024-09-30 22:53:13,543 INFO    MainThread:356570 [wandb_run.py:_redirect():2312] redirect: wrap_raw
+2024-09-30 22:53:13,543 INFO    MainThread:356570 [wandb_run.py:_redirect():2377] Wrapping output streams.
+2024-09-30 22:53:13,543 INFO    MainThread:356570 [wandb_run.py:_redirect():2402] Redirects installed.
+2024-09-30 22:53:13,544 INFO    MainThread:356570 [wandb_init.py:init():893] run started, returning control to user process
+2024-09-30 22:53:46,956 WARNING MsgRouterThr:356570 [router.py:message_loop():77] message_loop has been closed

@@ -1,0 +1,36 @@
+Training parameters:
+num_epochs: 300
+num_diffusion_iters: 100
+num_tests: 100
+num_train_demos: 500
+num_vis_demos: 3
+pred_horizon: 16
+obs_horizon: 2
+action_horizon: 8
+
+Baseline Mode: Train Single Diffusion Policy
+Training parameters:
+num_diffusion_iters: 100
+num_tests: 100
+num_train_demos: 500
+num_vis_demos: 3
+pred_horizon: 16
+obs_horizon: 2
+action_horizon: 8
+/home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/eval_baseline.py:87: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model_state_dict = torch.load(model_path)
+/home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/eval_baseline.py:92: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model_state_dict = torch.load(ema_path)
+All models have been loaded successfully.
+
+Eval Diff Policy on Domain #18:
+Traceback (most recent call last):
+  File "/home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/test_domain_18_model.py", line 159, in <module>
+    main()
+  File "/home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/test_domain_18_model.py", line 133, in main
+    scores = eval_baseline(config, dataset_name, num_datasets, combined_stats, checkpoint_dir)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jordan/Han/feature_analysis_code_for_submission/evaluation_test_socre/eval_baseline.py", line 125, in eval_baseline
+    env = PushTImageEnv(domain_filename=dataset_name[domain_j], resize_scale=resize_scale, pretrained=config["use_pretrained"])
+                                                                                                      ~~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'use_pretrained'

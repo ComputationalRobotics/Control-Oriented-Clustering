@@ -1,0 +1,28 @@
+# mode
+adapt: false
+use_pretrained: false
+
+# dirs
+display_name: NC_pretrain_100demos_fixed_range
+dataset_path_dir: /home/turing/haocheng/franka_control/dataset_dir
+models_save_dir: NC_pretrain_100demos_fixed_range
+output_dir: NC_pretrain_100demos_fixed_range
+
+# hyperparams
+num_epochs: 300
+num_diffusion_iters: 100
+num_tests: 50
+num_vis_demos: 3
+num_train_demos: 100
+num_warmup_steps: 500
+pred_horizon: 16
+obs_horizon: 2
+action_horizon: 8
+max_steps: 300
+eval_epoch: 20
+lr: 0.0001
+weight_decay: 0.000001
+batch_size: 10000000
+resize_scale: 96
+wandb: true
+verbose: false
